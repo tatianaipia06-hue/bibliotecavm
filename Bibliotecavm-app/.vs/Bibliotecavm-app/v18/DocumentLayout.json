@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1845E2BA-EB8B-48D1-84FD-F67410ED0DBD}|Presentation\\Presentation.csproj|C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\presentation\\wfuserregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\data\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|solutionrelative:data\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|c:\\users\\ant\\desktop\\practica_biblioteca\\app_final\\bibliotecavm-app\\data\\persistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|solutionrelative:data\\persistencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1845E2BA-EB8B-48D1-84FD-F67410ED0DBD}|Presentation\\Presentation.csproj|c:\\users\\ant\\desktop\\practica_biblioteca\\app_final\\bibliotecavm-app\\presentation\\wfuserregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1845E2BA-EB8B-48D1-84FD-F67410ED0DBD}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wfuserregistration.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,15 +51,11 @@
       "RelativeMoniker": "D:0:0:{A1629BAA-5293-437B-B823-36768FB70DF7}|Logic\\Logic.csproj|solutionrelative:logic\\purchaserequestlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\data\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|solutionrelative:data\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|c:\\users\\ant\\desktop\\practica_biblioteca\\app_final\\bibliotecavm-app\\data\\userdat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\data\\userdat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|solutionrelative:data\\userdat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|c:\\users\\ant\\desktop\\practica_biblioteca\\app_final\\bibliotecavm-app\\data\\purchaserequestdat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\data\\purchaserequestdat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC891C30-717A-4001-B8B2-687E5558E465}|Data\\Data.csproj|solutionrelative:data\\purchaserequestdat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -62,11 +66,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 1,
+              "Title": "Persistencia.cs",
+              "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Data\\Persistencia.cs",
+              "RelativeDocumentMoniker": "Data\\Persistencia.cs",
+              "ToolTip": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Data\\Persistencia.cs",
+              "RelativeToolTip": "Data\\Persistencia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-21T21:57:24.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PurchaseRequestDat.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Data\\PurchaseRequestDat.cs",
               "RelativeDocumentMoniker": "Data\\PurchaseRequestDat.cs",
@@ -74,12 +91,11 @@
               "RelativeToolTip": "Data\\PurchaseRequestDat.cs",
               "ViewState": "AgIAANAAAAAAAAAAAAAwwPQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T19:41:14.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T19:41:14.731Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "PurchaseRequestLog.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Logic\\PurchaseRequestLog.cs",
               "RelativeDocumentMoniker": "Logic\\PurchaseRequestLog.cs",
@@ -87,12 +103,11 @@
               "RelativeToolTip": "Logic\\PurchaseRequestLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T15:32:48.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T15:32:48.148Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "WFPurchaseRequestManagement.aspx.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Presentation\\WFPurchaseRequestManagement.aspx.cs",
               "RelativeDocumentMoniker": "Presentation\\WFPurchaseRequestManagement.aspx.cs",
@@ -100,12 +115,11 @@
               "RelativeToolTip": "Presentation\\WFPurchaseRequestManagement.aspx.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAiwKAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T14:43:15.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T14:43:15.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "WFPurchaseRequestManagement.aspx",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Presentation\\WFPurchaseRequestManagement.aspx",
               "RelativeDocumentMoniker": "Presentation\\WFPurchaseRequestManagement.aspx",
@@ -113,12 +127,11 @@
               "RelativeToolTip": "Presentation\\WFPurchaseRequestManagement.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-05-21T14:41:00.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T14:41:00.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Default.aspx.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Presentation\\Default.aspx.cs",
               "RelativeDocumentMoniker": "Presentation\\Default.aspx.cs",
@@ -126,12 +139,11 @@
               "RelativeToolTip": "Presentation\\Default.aspx.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAgwGMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T12:46:25.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T12:46:25.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Default.aspx",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Presentation\\Default.aspx",
               "RelativeDocumentMoniker": "Presentation\\Default.aspx",
@@ -139,12 +151,11 @@
               "RelativeToolTip": "Presentation\\Default.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-05-21T12:46:13.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T12:46:13.106Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "UserDat.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Data\\UserDat.cs",
               "RelativeDocumentMoniker": "Data\\UserDat.cs",
@@ -152,12 +163,11 @@
               "RelativeToolTip": "Data\\UserDat.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAlwA8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-21T12:23:24.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-21T12:23:24.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "WFUserRegistration.aspx.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Presentation\\WFUserRegistration.aspx.cs",
               "RelativeDocumentMoniker": "Presentation\\WFUserRegistration.aspx.cs",
@@ -170,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "WFUserRegistration.aspx",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Presentation\\WFUserRegistration.aspx",
               "RelativeDocumentMoniker": "Presentation\\WFUserRegistration.aspx",
@@ -178,25 +188,24 @@
               "RelativeToolTip": "Presentation\\WFUserRegistration.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2026-05-20T00:48:24.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T00:48:24.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Data\\Web.config",
               "RelativeDocumentMoniker": "Data\\Web.config",
               "ToolTip": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Data\\Web.config",
               "RelativeToolTip": "Data\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2026-05-19T23:55:55.414Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "VisitsLog.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Logic\\VisitsLog.cs",
               "RelativeDocumentMoniker": "Logic\\VisitsLog.cs",
@@ -204,12 +213,11 @@
               "RelativeToolTip": "Logic\\VisitsLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T23:18:16.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T23:18:16.151Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "UserLogic.cs",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Logic\\UserLogic.cs",
               "RelativeDocumentMoniker": "Logic\\UserLogic.cs",
@@ -217,12 +225,11 @@
               "RelativeToolTip": "Logic\\UserLogic.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAuwFMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-11T23:10:21.838Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-11T23:10:21.838Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\ANT\\Desktop\\PRACTICA_BIBLIOTECA\\App_Final\\Bibliotecavm-app\\Presentation\\Web.config",
               "RelativeDocumentMoniker": "Presentation\\Web.config",
