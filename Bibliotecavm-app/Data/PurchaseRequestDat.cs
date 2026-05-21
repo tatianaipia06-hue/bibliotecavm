@@ -1,0 +1,276 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
+
+namespace Data
+{
+    public class PurchaseRequestDat
+    {
+        Persistencia objPer = new Persistencia();
+
+        // Mostrar todas las solicitudes de compra
+        public DataSet showPurchaseRequest()
+        {
+            DataSet objData = new DataSet();
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            objSelectCmd.Connection = objPer.openConnection();
+            objSelectCmd.CommandText = "procSelectPurchase_request"; // Procedimiento almacenado
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.closeConnection();
+
+            return objData;
+        }
+
+        // Mostrar solicitudes en formato DDL
+        public DataSet showPurchaseRequestDDL()
+        {
+            DataSet objData = new DataSet();
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            objSelectCmd.Connection = objPer.openConnection();
+            objSelectCmd.CommandText = "procSelectPurchase_requestDDL"; // Procedimiento almacenado
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.closeConnection();
+
+            return objData;
+        }
+
+        // Guardar una solicitud de compra
+        public bool savePurchaseRequest(string solic_ticket, DateTime solic_fecha, int user_id, int solic_cantidad, int mat_id, out string errorMessage)
+        {
+            bool executed = false;
+            errorMessage = string.Empty;
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            try
+            {
+                objSelectCmd.Connection = objPer.openConnection();
+                objSelectCmd.CommandText = "procInsertPurchase_request"; // Procedimiento almacenado
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+                objSelectCmd.Parameters.AddWithValue("v_solic_ticket", solic_ticket);
+                objSelectCmd.Parameters.AddWithValue("v_solic_fecha", solic_fecha);
+                objSelectCmd.Parameters.AddWithValue("v_tbl_usuarios_usu_id", user_id);
+                objSelectCmd.Parameters.AddWithValue("v_solic_cantidad", solic_cantidad);
+                objSelectCmd.Parameters.AddWithValue("v_tbl_material_edu_mat_id", mat_id);
+
+                executed = objSelectCmd.ExecuteNonQuery() > 0;
+            }
+            catch (MySqlException ex)
+            {
+                errorMessage = ex.Message;
+            }
+            catch (Exception e)
+            {
+                errorMessage = "Error inesperado: " + e.Message;
+            }
+            finally
+            {
+                objPer.closeConnection();
+            }
+
+            return executed;
+        }
+
+        // Actualizar una solicitud de compra
+        public bool updatePurchaseRequest(int solic_id, string solic_ticket, DateTime solic_fecha, int user_id, int solic_cantidad, int mat_id)
+        {
+            bool executed = false;
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            try
+            {
+                objSelectCmd.Connection = objPer.openConnection();
+                objSelectCmd.CommandText = "procUpdatePurchase_request"; // Procedimiento almacenado
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+                objSelectCmd.Parameters.AddWithValue("v_solic_id", solic_id);
+                objSelectCmd.Parameters.AddWithValue("v_solic_ticket", solic_ticket);
+                objSelectCmd.Parameters.AddWithValue("v_solic_fecha", solic_fecha);
+                objSelectCmd.Parameters.AddWithValue("v_tbl_usuarios_usu_id", user_id);
+                objSelectCmd.Parameters.AddWithValue("v_solic_cantidad", solic_cantidad);
+                objSelectCmd.Parameters.AddWithValue("v_tbl_material_edu_mat_id", mat_id);
+
+                executed = objSelectCmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error al actualizar la solicitud: " + e.Message);
+                throw;
+            }   
+            finally
+            {
+                objPer.closeConnection();
+            }
+
+            return executed;
+        }
+
+        // Eliminar una solicitud de compra
+        public bool deletePurchaseRequest(int solic_id)
+        {
+            bool executed = false;
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            try
+            {
+                objSelectCmd.Connection = objPer.openConnection();
+                objSelectCmd.CommandText = "procDeletePurchase_request"; // Procedimiento almacenado
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+                objSelectCmd.Parameters.AddWithValue("v_solic_id", solic_id);
+
+                executed = objSelectCmd.ExecuteNonQuery() > 0;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error: " + e.Message);
+                throw;
+            }
+            finally
+            {
+                objPer.closeConnection();
+            }
+
+            return executed;
+        }
+
+        // Contar las solicitudes de compra
+        public int countPurchaseRequests()
+        {
+            int totalRequests = -1;
+            MySqlCommand objCountCmd = new MySqlCommand();
+
+            try
+            {
+                objCountCmd.Connection = objPer.openConnection();
+                objCountCmd.CommandText = "procCountPurchaseRequests"; // Procedimiento almacenado
+                objCountCmd.CommandType = CommandType.StoredProcedure;
+
+                object result = objCountCmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                {
+                    totalRequests = Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al contar las solicitudes: " + ex.Message);
+            }
+            finally
+            {
+                objPer.closeConnection();
+            }
+
+            return totalRequests;
+        }
+
+        // Mostrar las solicitudes del usuario logueado
+        public DataSet showPurchaseRequestsByUser(int userId)
+        {
+            DataSet objData = new DataSet();
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            objSelectCmd.Connection = objPer.openConnection();
+            objSelectCmd.CommandText = "procSelectPurchaseRequestsByUser"; // Procedimiento almacenado
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+            //objSelectCmd.Parameters.AddWithValue("v_user_id", userId);
+            objSelectCmd.Parameters.AddWithValue("v_usu_id", userId);
+
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.closeConnection();
+
+            return objData;
+        }
+
+        // Obtener lista  de materiales educativos con sus datos
+        /*public DataSet showGetMaterials()
+        {
+            DataSet objData = new DataSet();
+            try
+            {
+                MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+                MySqlCommand objSelectCmd = new MySqlCommand();
+
+                objSelectCmd.Connection = objPer.openConnection();
+                objSelectCmd.CommandText = "procGetMaterials";
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+
+                objAdapter.SelectCommand = objSelectCmd;
+                objAdapter.Fill(objData);
+
+                objPer.closeConnection();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al obtener materiales: " + ex.Message);
+            }
+            return objData;
+        }*/
+        // Obtener lista de materiales educativos con sus datos (CORREGIDO)
+        public DataSet showGetMaterials()
+        {
+            DataSet objData = new DataSet();
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            try
+            {
+                // Forzamos la apertura y asignación inmediata de la conexión
+                objSelectCmd.Connection = objPer.openConnection();
+                objSelectCmd.CommandText = "procGetMaterials"; // Nombre de tu procedimiento
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+
+                objAdapter.SelectCommand = objSelectCmd;
+                objAdapter.Fill(objData); // Ahora sí llenará los datos de forma segura
+            }
+            catch (Exception ex)
+            {
+                // Si algo falla, lanzamos el error real hacia la pantalla para saber qué pasa
+                throw new Exception("Error en la base de datos al obtener materiales: " + ex.Message);
+            }
+            finally
+            {
+                // Pase lo que pase, cerramos la conexión para no saturar MySQL
+                objPer.closeConnection();
+            }
+
+            return objData;
+        }
+
+        public DataSet ListarMaterialesEducativos()
+        {
+            DataSet ds = new DataSet();
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            MySqlCommand objSelectCmd = new MySqlCommand();
+
+            try
+            {
+                objSelectCmd.Connection = objPer.openConnection();
+                objSelectCmd.CommandText = "procListarMaterialesEducativos"; // Nombre del SP
+                objSelectCmd.CommandType = CommandType.StoredProcedure;
+
+                objAdapter.SelectCommand = objSelectCmd;
+                objAdapter.Fill(ds); // Llenar el DataSet con los resultados del SP
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al listar materiales educativos: " + ex.Message);
+            }
+            finally
+            {
+                objPer.closeConnection();
+            }
+
+            return ds;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+﻿using Data;
+using Model;
+using System;
+using System.Data;
+
+namespace Logic
+{
+    public class UserLogic
+    {
+        UserDat objUserDat = new UserDat();
+
+        // Método para mostrar todos los Usuarios
+        public DataSet showUsers()
+        {
+            return objUserDat.showUsers();
+        }
+
+        // Método para mostrar solamente el ID y el nombre completo de los Usuarios (DDL)
+        public DataSet showUserDDL()
+        {
+            return objUserDat.showUsersDDL();
+        }
+
+        // Método para guardar un nuevo Usuario
+        public bool saveUser(string nombre, string apellido, string correo, string contrasena, string salt, string rol, string nivelEstudios)
+        {
+            return objUserDat.saveUser(nombre, apellido, correo, contrasena, salt, rol, nivelEstudios);
+        }
+
+        // Método para actualizar un Usuario
+        public bool updateUser(int idUser, string nombre, string apellido, string correo, string contrasena, string salt, string rol, string nivelEstudios)
+        {
+            return objUserDat.updateUser(idUser, nombre, apellido, correo, contrasena, salt, rol, nivelEstudios);
+        }
+
+        // Método para borrar un Usuario
+        public bool deleteUser(int idUser)
+        {
+            return objUserDat.deleteUser(idUser);
+        }
+
+        // Método para validar el login de usuario
+        public User validateUserLogin(string correo, string contrasena)
+        {
+            // Llamar al método de la capa de datos para obtener el usuario por correo
+            User objUser = objUserDat.showUsersMail(correo);
+
+            // Devolver el objeto User obtenido (sin validaciones adicionales)
+            return objUser;
+        }
+
+
+        // Método para verificar si un correo ya está registrado
+        public bool isEmailRegistered(string correo)
+        {
+            return objUserDat.checkEmailExists(correo); // Llamamos al método correcto en la capa de datos
+        }
+
+        // Método para verificar si existe al menos un administrador
+        public bool CheckAdminExists()
+        {
+            return objUserDat.AdminExists(); // Llamamos al método en la capa de datos
+        }
+        // Método para buscar usuarios por correo electrónico (coincidencia parcial)
+        public DataSet SearchUsersByEmail(string email)
+        {
+            try
+            {
+                // Validar que el parámetro no esté vacío
+                if (string.IsNullOrWhiteSpace(email))
+                {
+                    throw new ArgumentException("El término de búsqueda no puede estar vacío");
+                }
+
+                // Llamar al método de la capa de datos
+                return objUserDat.SearchUsersByEmail(email);
+            }
+            catch (Exception ex)
+            {
+                // Puedes registrar el error aquí si es necesario
+                throw new Exception("Error en la capa lógica al buscar usuarios: " + ex.Message);
+            }
+
+        }
+        // Método puente para obtener el usuario por correo electrónico
+        public User getUserByEmail(string mail)
+        {
+            return objUserDat.showUsersMail(mail);
+        }
+    }
+}
